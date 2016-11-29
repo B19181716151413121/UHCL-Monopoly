@@ -274,8 +274,8 @@ class Main():
     while (gameCont > 0):
         print("__________________________")
         print("\n\n", plist[turn].name + "'s turn\n")
-        #move = input("\nWhat do you want to do? ")#roll, stats, props
-        move = 'roll'
+        move = input("\nWhat do you want to do? ")#roll, stats, props
+        #move = 'roll' # For AI
 
         if (move == "roll" or move == 'r'):
             dice1 = randint(1, 6)
@@ -364,8 +364,8 @@ class Main():
                     plist[turn].position].cost):
                     print(info.board[plist[turn].position].name, "is not owned by anyone")
                     print(info.board[plist[turn].position].name, "costs $", info.board[plist[turn].position].cost)
-                    #buy = input("\nWould you like to purchase it? ")
-                    buy = 'yes'
+                    buy = input("\nWould you like to purchase it? ")
+                    #buy = 'yes' #For AI
                     if (buy == 'y' or buy == 'yes'):
                         plist[turn].money -= info.board[plist[turn].position].cost
                         plist[turn].props.append(info.board[plist[turn].position].name)
